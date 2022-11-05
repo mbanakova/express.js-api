@@ -32,9 +32,11 @@ app.put('/api/contacts/:id', (req, res) => {
   res.json(CONTACTS[idx])
 })
 
-app.use(express.static(path.resolve(__dirname, 'client')))
+// app.use(express.static(path.resolve(__dirname, 'client')))
+app.use(express.static(path.resolve(__dirname, 'frontend/dist')))
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
+  // res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
+  res.sendFile(path.resolve(__dirname, 'frontend/dist/index.html'))
 })
 
 app.listen(3000, () => console.log('Server started on port 3000...'))

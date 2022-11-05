@@ -1,0 +1,59 @@
+$dark: #151f32;
+$navy: #18273f;
+$light: #35507c;
+$bright: #328af1;
+$accent: #f73b75;
+$warning: #f7ac3b;
+$success: #0fba79;
+$light: #d0e6f3;
+
+$black: #000000;
+$white: #ffffff;
+
+$tr: all 0.3s ease-in-out;
+
+$font: "Roboto", sans-serif;
+
+$mobile: 767px;
+$tablet: 1023px;
+
+$header: 60px;
+$footer: 100px;
+
+#app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex-grow: 1;
+	padding: 0 0 40px;
+}
+
+.route {
+	&-enter-from,
+	&-leave-to {
+		opacity: 0;
+	}
+
+	&-enter-active {
+		transition: all 0.2s ease-out;
+	}
+
+	&-leave-active {
+		transition: all 0.2s ease-in;
+	}
+
+	&-enter-to,
+	&-leave-from {
+		opacity: 1;
+	}
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 40px;
+}
